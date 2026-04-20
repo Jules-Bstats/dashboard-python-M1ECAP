@@ -246,7 +246,7 @@ app = dash.Dash(
     external_stylesheets=[dbc.themes.BOOTSTRAP],
     title="SuperMega Market",
 )
-
+server = app.server
 app.layout = html.Div([
 
     # ── HEADER ──
@@ -371,4 +371,4 @@ def update_all(cities, gender):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8060)
+    app.run(debug=True)
