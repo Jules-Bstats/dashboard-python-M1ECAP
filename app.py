@@ -8,6 +8,7 @@ import dash
 from dash import html, dcc, Input, Output, callback
 import dash_bootstrap_components as dbc
 
+
 # ─── CHARTE GRAPHIQUE ───────────────────────────────────────────────
 COLORS = {
     "bg":       "#1A1A2E",
