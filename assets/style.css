@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+/* ─── VARIABLES ─── */
+:root {
+  --smm-black:   #1A1A2E;
+  --smm-deep:    #16213E;
+  --smm-accent:  #E94560;
+  --smm-gold:    #F5A623;
+  --smm-teal:    #0FC3C3;
+  --smm-purple:  #8B5CF6;
+  --smm-light:   #F4F4F8;
+  --smm-muted:   #8A8A9A;
+  --smm-white:   #FFFFFF;
+  --smm-border:  rgba(255,255,255,0.08);
+}
+
+/* ─── BASE ─── */
+body, html {
+  background-color: var(--smm-light) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  color: var(--smm-black) !important;
+  margin: 0;
+}
+
+/* ─── HEADER ─── */
+.smm-header {
+  background: var(--smm-black);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--smm-border);
+}
+
+.smm-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--smm-white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.smm-logo .accent { color: var(--smm-accent); }
+
+.smm-subtitle {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--smm-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* ─── FILTRES ─── */
+.smm-filters-bar {
+  background: var(--smm-black);
+  padding: 12px 28px 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid var(--smm-accent);
+}
+
+.smm-filter-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--smm-muted);
+  white-space: nowrap;
+}
+
+/* Dropdown Dash override */
+.smm-filters-bar .Select-control {
+  background: rgba(255,255,255,0.07) !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  border-radius: 8px !important;
+  color: var(--smm-white) !important;
+}
+
+.smm-filters-bar .Select-value-label,
+.smm-filters-bar .Select-placeholder {
+  color: var(--smm-white) !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 13px !important;
+}
+
+.smm-filters-bar .Select-arrow { border-top-color: var(--smm-muted) !important; }
+
+/* ─── MAIN CONTENT ─── */
+.smm-main {
+  padding: 24px 28px;
+  background: var(--smm-light);
+}
+
+/* ─── SECTION LABELS ─── */
+.smm-section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--smm-accent);
+  margin-bottom: 10px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ─── KPI CARDS ─── */
+.smm-kpi-card {
+  background: var(--smm-black) !important;
+  border-radius: 12px !important;
+  padding: 20px 22px !important;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.smm-kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: var(--smm-accent);
+  border-radius: 12px 0 0 12px;
+}
+
+.smm-kpi-graph {
+  background: transparent !important;
+  margin: -4px -4px -8px;
+}
+
+/* ─── CHART CARDS ─── */
+.smm-chart-card {
+  background: var(--smm-white) !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  height: 100%;
+}
+
+/* ─── PLOTLY OVERRIDES ─── */
+.js-plotly-plot .plotly .modebar {
+  background: transparent !important;
+}
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--smm-light); }
+::-webkit-scrollbar-thumb { background: var(--smm-muted); border-radius: 3px; }
